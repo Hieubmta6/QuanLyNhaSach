@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AC8DA73-8335-45B7-AD5D-06E79248719B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Doan</RootNamespace>
+    <AssemblyName>Doan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Class_dangnhap.cs" />
+    <Compile Include="Class\Class_kho.cs" />
+    <Compile Include="Class\Class_loaisach.cs" />
+    <Compile Include="Class\Class_nhanvien.cs" />
+    <Compile Include="Class\Class_NXB.cs" />
+    <Compile Include="Class\Class_Tacgia.cs" />
+    <Compile Include="Class\Class_taikhoan.cs" />
+    <Compile Include="Class\connect.cs" />
+    <Compile Include="Class\CTHDDAL.cs" />
+    <Compile Include="Class\HDDAL.cs" />
+    <Compile Include="Class\KHDAL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HoaDon.Designer.cs">
+      <DependentUpon>Form_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KhachHang.Designer.cs">
+      <DependentUpon>Form_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho.Designer.cs">
+      <DependentUpon>Form_Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho2.Designer.cs">
+      <DependentUpon>Form_Kho2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Loaisach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Loaisach.Designer.cs">
+      <DependentUpon>Form_Loaisach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main.Designer.cs">
+      <DependentUpon>Form_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_nhanvien.Designer.cs">
+      <DependentUpon>Form_nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_nhaxuatban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_nhaxuatban.Designer.cs">
+      <DependentUpon>Form_nhaxuatban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_phanquyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_phanquyen.Designer.cs">
+      <DependentUpon>Form_phanquyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_quanlysach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_quanlysach.Designer.cs">
+      <DependentUpon>Form_quanlysach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_quantrihethong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_quantrihethong.Designer.cs">
+      <DependentUpon>Form_quantrihethong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_report.Designer.cs">
+      <DependentUpon>Form_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tacgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tacgia.Designer.cs">
+      <DependentUpon>Form_Tacgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_taikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_taikhoan.Designer.cs">
+      <DependentUpon>Form_taikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanlynhasachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanlynhasachDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Class_sach.cs" />
+    <Compile Include="Report_CTHD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_CTHD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HoaDon.resx">
+      <DependentUpon>Form_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KhachHang.resx">
+      <DependentUpon>Form_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho.resx">
+      <DependentUpon>Form_Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho2.resx">
+      <DependentUpon>Form_Kho2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Loaisach.resx">
+      <DependentUpon>Form_Loaisach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_main.resx">
+      <DependentUpon>Form_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_nhanvien.resx">
+      <DependentUpon>Form_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_nhaxuatban.resx">
+      <DependentUpon>Form_nhaxuatban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_phanquyen.resx">
+      <DependentUpon>Form_phanquyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_quanlysach.resx">
+      <DependentUpon>Form_quanlysach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_quantrihethong.resx">
+      <DependentUpon>Form_quantrihethong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_report.resx">
+      <DependentUpon>Form_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tacgia.resx">
+      <DependentUpon>Form_Tacgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_taikhoan.resx">
+      <DependentUpon>Form_taikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CTHD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_CTHD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanlynhasachDataSet.xsc">
+      <DependentUpon>QuanlynhasachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanlynhasachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanlynhasachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanlynhasachDataSet.xss">
+      <DependentUpon>QuanlynhasachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\myhc_5668.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-people-man-profile-human-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_137448.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marty-mcfly-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset_9-2-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked-128 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_4-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business_graph_monitor_report-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myhc_56681.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookshelf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_1374481.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEO-ceo_office-employees-businessman-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_users_1902261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-01-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\follow-128 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_3-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05_phonebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MySpace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phan-quyen-quan-ly-nhan-vien-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IdealZanyCockatiel-size_restricted %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_1374482.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_5NQpF-uOntn0VR-F.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myhc_56682.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sach-go-trang-tri-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13_setting_configure_repair_support_optimization_google-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business-_PS_Style-24-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_magnifying_glass_find-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileclose1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IdealZanyCockatiel-size_restricted %281%291.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secret_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_self1_62587.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\holiday-hotel-bell-service-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_fork1_62572.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_fork1_625721.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geestao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_self1_625871.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\442743501_palet-02-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_self1_625872.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handle4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05_phonebook1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fpt-tuyen-nhan-vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_4-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEO-ceo_office-employees-businessman-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_women_glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_women_glasses1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secret_book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\follow-128 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_4-1282.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_4-1283.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CEO-ceo_office-employees-businessman-1282.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\holiday-hotel-bell-service-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_self1_625873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_4-1284.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-trash7.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
